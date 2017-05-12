@@ -4,6 +4,12 @@
 build
 classes
 out
+.classpath
+.settings
+.vscode
+bin
+.Project
+
 
 # Windows image file caches
 Thumbs.db
