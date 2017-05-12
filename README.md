@@ -11,16 +11,20 @@ Navigate to the `vehicle-survey` directory under the cloned repository from abov
 `.\gradlew build`
 
 This will run all tests and build the tool into:
+
 `build/libs/vehiclesurvey-1.0.0.jar`
 
 Run the program with default settings:
+
  `java -cp build/libs/vehiclesurvey-1.0.0.jar vehiclesurvey.App`
 
 Run the program with a sample file:
+
  `java -cp build/libs/vehiclesurvey-1.0.0.jar vehiclesurvey.App src/main/resources/sample-data.txt`
 
 
  The Output survey files will be stored in directory
+ 
  `out/survey`
 
  The Test cases can be found in `src/test` folder.
