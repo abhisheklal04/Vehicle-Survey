@@ -68,12 +68,6 @@ public class App {
 
     private void generateSurvey() throws Exception{
 
-        /*SurveyFormat countDistributionFormatNorth = new SurveyFormat("Vehicle Counts",
-          "Minutes Session","North", "Start Time", "End Time");
-        Map<Integer,List<FactItem>> countSurveyNorth = surveyService.analyseData(AnalyserTypes.COUNT, Direction.NORTH);
-        fileUtils.writeTextFile(fileUtils.getFilePath("Vehicle_Counts_North")
-          , fileUtils.convertFactToFileFormat(countSurveyNorth, countDistributionFormatNorth));*/
-
         for( AnalyserTypes analyserType : AnalyserTypes.values()) {
             for(Direction direction : Direction.values()) {
                 SurveyFormat surveyFormat = new SurveyFormat("Vehicle " + analyserType + " Distribution",
@@ -83,32 +77,6 @@ public class App {
                   , fileUtils.convertFactToFileFormat(surveyData, surveyFormat));
             }
         }
-/*
-        Map<Integer,List<FactItem>> countSurveySouth = surveyService.analyseData(AnalyserTypes.COUNT, Direction.SOUTH);
-        fileUtils.writeTextFile(fileUtils.getFilePath("Vehicle_Counts_South") ,
-          fileUtils.convertFactToFileFormat(countSurveySouth, countDistributionFormat));
-
-        SurveyFormat speedDistributionFormat = new SurveyFormat("Vehicle Speed(Mtr Per Sec) Distribution",
-          "Minutes Session","Direction", "Start Time", "End Time");
-
-        SurveyFormat distanceDistributionFormat = new SurveyFormat("Vehicle Speed(Mtr Per Sec) Distribution",
-          "Minutes Session","Direction", "Start Time", "End Time");
-
-        Map<Integer,List<FactItem>> speedSurveyNorth = surveyService.analyseData(AnalyserTypes.SPEED, Direction.NORTH);
-        fileUtils.writeTextFile(fileUtils.getFilePath("Vehicle_Speeds_North") ,
-          fileUtils.convertFactToFileFormat(speedSurveyNorth, speedDistributionFormat));
-
-        Map<Integer,List<FactItem>> speedSurveySouth = surveyService.analyseData(AnalyserTypes.SPEED, Direction.SOUTH);
-        fileUtils.writeTextFile(fileUtils.getFilePath("Vehicle_Speeds_South") ,
-          fileUtils.convertFactToFileFormat(speedSurveySouth, speedDistributionFormat));
-
-        Map<Integer,List<FactItem>> distanceSurveyNorth = surveyService.analyseData(AnalyserTypes.DISTANCE, Direction.NORTH);
-        fileUtils.writeTextFile(fileUtils.getFilePath("Vehicle_Distance_North") ,
-          fileUtils.convertFactToFileFormat(distanceSurveyNorth, distanceDistributionFormat));
-
-        Map<Integer,List<FactItem>> distanceSurveySouth = surveyService.analyseData(AnalyserTypes.DISTANCE, Direction.SOUTH);
-        fileUtils.writeTextFile(fileUtils.getFilePath("Vehicle_Distance_South") ,
-          fileUtils.convertFactToFileFormat(distanceSurveySouth, distanceDistributionFormat));*/
     }
 
     public static void main(String[] args) {
