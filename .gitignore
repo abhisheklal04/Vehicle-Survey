@@ -1,3 +1,10 @@
+# ProjectFiles
+.gradle
+.idea
+build
+classes
+out
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
